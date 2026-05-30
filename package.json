@@ -1,0 +1,19 @@
+{
+  "name": "liquor-arrival-alarm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/index.ts",
+    "check": "node --experimental-strip-types src/index.ts --dry-run",
+    "baseline": "node --experimental-strip-types src/index.ts --baseline",
+    "telegram:chats": "node --experimental-strip-types src/telegram-chats.ts",
+    "schedule:install": "node --experimental-strip-types scripts/install-cron.ts",
+    "schedule:uninstall": "node --experimental-strip-types scripts/uninstall-cron.ts",
+    "schedule:install:launchd": "node --experimental-strip-types scripts/install-launchd.ts",
+    "schedule:uninstall:launchd": "node --experimental-strip-types scripts/uninstall-launchd.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
