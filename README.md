@@ -1,6 +1,7 @@
 # Liquor Arrival Alarm
 
 Cypress Craft와 Hi Proof의 New Arrivals 컬렉션을 확인하고 새 상품을 텔레그램으로 알립니다.
+상품 이미지가 있으면 텔레그램 사진 메시지에 상품명, 가격, 상태, 링크를 캡션으로 붙여 보냅니다.
 
 중복 판단 데이터는 기본적으로 로컬 `data/products.json`에 저장합니다. `SUPABASE_URL`과
 `SUPABASE_SERVICE_ROLE_KEY`가 있으면 Supabase Storage를 우선 사용합니다.
