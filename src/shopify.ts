@@ -45,10 +45,26 @@ export async function collectShopifySource(source: WatchSource): Promise<Product
       name: product.title,
       price: firstVariant ? `$${firstVariant.price}` : undefined,
       available: firstVariant?.available,
-      imageUrl: product.images?.[0]?.src,
+      imageUrl: normalizeShopifyImageUrl(product.images?.[0]?.src),
       publishedAt: product.published_at,
       url: new URL(product.handle, source.productBaseUrl).toString(),
       collectedAt
     };
   });
+}
+
+function normalizeShopifyImageUrl(imageUrl: string | undefined): string | undefined {
+  if (!imageUrl) {
+    return undefined;
+  }
+
+  try {
+    const parsed = imageUrl.startsWith("//") ? new URL(`https:${imageUrl}`) : new URL(imageUrl);
+    if (parsed.hostname === "cdn.shopify.com") {
+      parsed.searchParams.set("width", "1200");
+    }
+    return parsed.toString();
+  } catch {
+    return imageUrl;
+  }
 }
