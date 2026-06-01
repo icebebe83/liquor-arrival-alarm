@@ -22,7 +22,7 @@ async function main(): Promise<void> {
 
   await writeCrontab(next);
   console.log("Installed liquor-arrival-alarm cron schedule");
-  console.log("Runs at 06:00, 07:00, 08:00, 10:00, 11:00, 12:00 local system time");
+  console.log("Runs at 03:00, 04:00, 05:00, 06:00, 07:00, 08:00, 10:00, 11:00, 12:00 local system time");
 }
 
 async function readCrontab(): Promise<string> {
@@ -42,7 +42,7 @@ function managedBlock(): string {
 
   return [
     beginMarker,
-    `0 6,7,8,10,11,12 * * * ${command}`,
+    `0 3,4,5,6,7,8,10,11,12 * * * ${command}`,
     endMarker
   ].join("\n");
 }

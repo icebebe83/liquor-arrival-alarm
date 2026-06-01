@@ -27,6 +27,9 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
   </array>
   <key>StartCalendarInterval</key>
   <array>
+    <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>0</integer></dict>
     <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
     <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>0</integer></dict>
     <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>

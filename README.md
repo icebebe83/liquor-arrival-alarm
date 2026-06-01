@@ -48,7 +48,7 @@ npm start
 
 ## Schedule
 
-매일 06:00, 07:00, 08:00, 10:00, 11:00, 12:00에 자동 실행되도록 cron 스케줄을 설치합니다.
+매일 03:00, 04:00, 05:00, 06:00, 07:00, 08:00, 10:00, 11:00, 12:00에 자동 실행되도록 cron 스케줄을 설치합니다.
 
 ```bash
 npm run schedule:install
@@ -66,7 +66,7 @@ npm run schedule:uninstall
 ## GitHub Actions
 
 `.github/workflows/liquor-arrival-alarm.yml`은 GitHub Actions에서 실행됩니다.
-스케줄은 GitHub 기준 UTC로 등록되어 있으며, 한국 시간으로 매일 06:00, 07:00, 08:00, 10:00, 11:00, 12:00에 맞춰져 있습니다.
+스케줄은 GitHub 기준 UTC로 등록되어 있으며, 한국 시간으로 매일 03:00, 04:00, 05:00, 06:00, 07:00, 08:00, 10:00, 11:00, 12:00에 맞춰져 있습니다.
 
 GitHub 저장소 Settings > Secrets and variables > Actions에 아래 secrets를 추가합니다.
 
